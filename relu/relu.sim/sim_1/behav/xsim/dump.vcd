@@ -1,0 +1,24 @@
+$date
+   Thu Nov 19 00:22:00 2020
+$end
+$version
+  2020.1
+$end
+$timescale
+  1ps
+$end
+$scope module testbench $end
+$var reg 32 ! x [0:31] $end
+$var wire 32 " a [0:31] $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1000001000111000000000000000000 !
+b1000001000111000000000000000000 "
+$end
+#300000
+b11000001000111000000000000000000 !
+b0 "
+#600000
+b0 !

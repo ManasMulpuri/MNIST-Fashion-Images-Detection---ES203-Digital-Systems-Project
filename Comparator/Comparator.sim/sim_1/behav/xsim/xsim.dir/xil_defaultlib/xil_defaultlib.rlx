@@ -1,0 +1,7 @@
+0.7
+2020.1
+May 27 2020
+20:09:33
+C:/Users/ckskc/Comparator/Comparator.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
+C:/Users/ckskc/Comparator/Comparator.srcs/sim_1/new/Tb_comparator.v,1605712744,verilog,,,,Tb_comparator,,,,,,,,
+C:/Users/ckskc/Comparator/Comparator.srcs/sources_1/new/Design_Comparator.v,1605709394,verilog,,C:/Users/ckskc/Comparator/Comparator.srcs/sim_1/new/Tb_comparator.v,,comp;comp_last_layer;float32_point_adder;float_multiplier;shift_for_subtract,,,,,,,,

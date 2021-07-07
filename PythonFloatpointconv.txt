@@ -1,0 +1,144 @@
+import os
+def binaryOfFraction(fraction): 
+  
+
+    
+    binary = str() 
+  
+      
+     
+
+    while (fraction): 
+          
+         
+        fraction *= 2
+  
+    
+
+        if (fraction >= 1): 
+            int_part = 1
+            fraction -= 1
+        else: 
+            int_part = 0
+      
+       
+        binary += str(int_part) 
+  
+    
+    return binary 
+  
+
+def binaryOfFraction(fraction): 
+  
+
+    
+    binary = str() 
+  
+      
+     
+
+    while (fraction): 
+          
+         
+        fraction *= 2
+  
+    
+
+        if (fraction >= 1): 
+            int_part = 1
+            fraction -= 1
+        else: 
+            int_part = 0
+      
+       
+        binary += str(int_part) 
+  
+    
+    return binary 
+  
+
+def floatingPoint(real_no): 
+  
+   
+    sign_bit = 0
+  
+    
+    if(real_no < 0): 
+        sign_bit = 1
+  
+   
+    real_no = abs(real_no) 
+  
+    
+    int_str = bin(int(real_no))[2 : ]
+    #print(int_str)
+  
+    
+    fraction_str = binaryOfFraction(real_no - int(real_no)) 
+    if(real_no<1):
+        ind = fraction_str.index('1') 
+        exp_str=bin(-(ind+1)+127)[2:]#right shift of decimal
+        exp_str =  ('0' * (8- len(exp_str)))+exp_str
+        if(ind==len(fraction_str)-1):
+            mant_str="0"
+        mant_str = fraction_str[ind + 1 : ]
+        
+        mant_str = mant_str + ('0' * (23 - len(mant_str)))#filling with 0s in LSb if bits are less than 23 
+        mant_str=mant_str[0:23]#if bits are more than 23
+        
+    
+    else:
+        ind = int_str.index('1') 
+   
+        exp_str = bin((len(int_str) - ind - 1) + 127)[2 : ] 
+        if (real_no==1):
+            exp_str="0"+bin((len(int_str) - ind - 1) + 127)[2: ] 
+
+        
+        exp_str =  ('0' * (8- len(exp_str)))+exp_str
+
+        mant_str = int_str[ind + 1 : ] + fraction_str 
+  
+
+        mant_str = mant_str + ('0' * (23 - len(mant_str))) 
+        if(len(mant_str)>23):
+            mant_str=mant_str[0:23]
+
+    return sign_bit, exp_str, mant_str 
+  
+# Driver Code 
+if __name__ == "__main__": 
+  
+    #sign_bit, exp_str, mant_str = floatingPoint(0.75) 
+  
+    
+    #ieee_32 = str(sign_bit) + exp_str  + mant_str 
+  
+    #Printing the ieee 32 represenation. 
+  
+
+    infile=open("C:\\Users\\rohit\\Downloads\\five_values.txt","r")
+    file=open("C:\\Users\\rohit\\Downloads\\five_values_fp.txt","a")
+    lines=infile.readlines()
+    file.truncate(0)
+    infile.close()
+    for i in lines:
+        try:
+            x=float(i)/255
+            sign_bit, exp_str, mant_str = floatingPoint(x)
+            ieee_32 = str(sign_bit) + exp_str  + mant_str 
+            
+    #print(ieee_32)
+            file.write(ieee_32+"\n") 
+   
+        except ValueError:
+            file.write("0"*32+"\n")
+        
+    
+    
+    file.close()
+    
+    
+    #sign_bit, exp_str, mant_str = floatingPoint(int(i)/256)
+    #ieee_32 = str(sign_bit) + exp_str  + mant_str 
+    #print(ieee_32) 

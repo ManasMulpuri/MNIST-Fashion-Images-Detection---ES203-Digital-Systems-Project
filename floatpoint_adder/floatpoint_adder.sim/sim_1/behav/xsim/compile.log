@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ManasM/floatpoint_adder/floatpoint_adder.srcs/sources_1/new/float32_point_adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shift_for_subtract
+INFO: [VRFC 10-311] analyzing module float32_point_adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ManasM/floatpoint_adder/floatpoint_adder.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench

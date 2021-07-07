@@ -1,0 +1,7 @@
+0.7
+2020.1
+May 27 2020
+20:09:33
+C:/Users/ManasM/floatpoint_adder/floatpoint_adder.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
+C:/Users/ManasM/floatpoint_adder/floatpoint_adder.srcs/sim_1/new/testbench.v,1605722399,verilog,,,,testbench,,,,,,,,
+C:/Users/ManasM/floatpoint_adder/floatpoint_adder.srcs/sources_1/new/float32_point_adder.v,1605774037,verilog,,C:/Users/ManasM/floatpoint_adder/floatpoint_adder.srcs/sim_1/new/testbench.v,,float32_point_adder;shift_for_subtract,,,,,,,,
